@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build output (Vercel builds its own)
+dist/
+
+# Local env (contains API URL; set VITE_API_URL in Vercel dashboard instead)
+.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json

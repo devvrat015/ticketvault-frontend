@@ -1,0 +1,721 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #17202a;
+  background: #f5f7f8;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* =========================
+   Header & Navigation
+   ========================= */
+
+header {
+  height: 70px;
+  background: #fff;
+  border-bottom: 1px solid #e4e8eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.brand span {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #75808a;
+  margin-left: 8px;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #4b5563;
+}
+
+/* =========================
+   Buttons
+   ========================= */
+
+.btn {
+  border: 0;
+  background: #18222c;
+  color: #fff;
+  border-radius: 9px;
+  padding: 11px 17px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.secondary {
+  background: #fff;
+  color: #18222c;
+  border: 1px solid #ccd3d8;
+}
+
+.btn.dark {
+  background: #111;
+}
+
+.btn.small {
+  padding: 8px 13px;
+}
+
+.btn.full {
+  width: 100%;
+}
+
+.ghost {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #5f6b75;
+}
+
+.textbtn {
+  border: 0;
+  background: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #5f6b75;
+  margin-left: 8px;
+}
+
+/* =========================
+   Layout
+   ========================= */
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  min-height: calc(100vh - 120px);
+}
+
+footer {
+  text-align: center;
+  padding: 24px;
+  color: #8a949c;
+  font-size: 12px;
+  border-top: 1px solid #e4e8eb;
+  background: #fff;
+}
+
+/* =========================
+   Hero Section
+   ========================= */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  gap: 70px;
+  align-items: center;
+  padding: 70px 0;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #7b8790;
+  margin: 0 0 10px;
+}
+
+.hero h1,
+.pagehead h1 {
+  font-size: 48px;
+  line-height: 1.05;
+  margin: 0 0 18px;
+  letter-spacing: -1.5px;
+}
+
+.lead {
+  font-size: 18px;
+  color: #65717b;
+  max-width: 680px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+/* =========================
+   Cards
+   ========================= */
+
+.card {
+  background: #fff;
+  border: 1px solid #e2e7ea;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 6px 20px rgba(20, 30, 40, 0.035);
+}
+
+/* =========================
+   Architecture
+   ========================= */
+
+.architecture {
+  display: grid;
+  gap: 12px;
+}
+
+.architecture b {
+  margin-bottom: 6px;
+}
+
+.architecture div {
+  padding: 10px 0;
+  border-top: 1px solid #edf0f2;
+  color: #59656e;
+}
+
+/* =========================
+   Page Header
+   ========================= */
+
+.pagehead {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.pagehead h1 {
+  font-size: 38px;
+}
+
+.pagehead p:not(.eyebrow) {
+  color: #68737c;
+  max-width: 700px;
+}
+
+/* =========================
+   Search
+   ========================= */
+
+.search {
+  display: flex;
+  gap: 8px;
+  min-width: 360px;
+}
+
+.search input {
+  flex: 1;
+}
+
+/* =========================
+   Event Grid
+   ========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.event {
+  transition: 0.15s;
+}
+
+.event:hover {
+  transform: translateY(-2px);
+  border-color: #bbc3c9;
+}
+
+.event h3 {
+  font-size: 20px;
+  margin: 14px 0 8px;
+}
+
+.event p {
+  color: #6c7780;
+  min-height: 48px;
+}
+
+.event strong,
+.event span {
+  display: block;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* =========================
+   Pills
+   ========================= */
+
+.pill {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #eef1f3;
+  color: #65717b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+/* =========================
+   Event Details
+   ========================= */
+
+.detailgrid {
+  display: grid;
+  grid-template-columns: 1.6fr 0.65fr;
+  gap: 18px;
+}
+
+.meta {
+  display: grid;
+  text-align: right;
+  gap: 4px;
+  font-size: 13px;
+  color: #68737c;
+}
+
+.stage {
+  text-align: center;
+  border: 1px solid #dfe4e7;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 20px auto;
+  width: 60%;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #7d8790;
+}
+
+.live {
+  font-size: 12px;
+  color: #707b84;
+  text-align: right;
+}
+
+/* =========================
+   Seat Map
+   ========================= */
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #aaa;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.dot.on {
+  background: #37a169;
+}
+
+.seatmap {
+  display: grid;
+  gap: 9px;
+  margin: 20px 0;
+}
+
+.seatrow {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+}
+
+.rowlabel {
+  width: 18px;
+  color: #7a858e;
+  font-weight: 800;
+}
+
+.seat {
+  width: 38px;
+  height: 34px;
+  border: 3px solid #63f894;
+  border-radius: 7px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.seat.available:hover {
+  background: #eef7f1;
+}
+
+.seat.held {
+  background: #f4ead2;
+  border-color: #d6b66c;
+}
+
+.seat.booked {
+  background: #e6e9eb;
+  color: #89929a;
+  border: 1px solid #89929a;
+  cursor: not-allowed;
+}
+
+/* =========================
+   Seat Legend
+   ========================= */
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 11px;
+  color: #69747d;
+}
+
+.legend i {
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  border: 1px solid #ccd3d8;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.legend i.available {
+  background: #fff;
+  border: 2px solid #6afa95;
+}
+
+.legend i.held {
+  background: #f4ead2;
+}
+
+.legend i.booked {
+  background: #e6e9eb;
+}
+
+/* =========================
+   Seat Inspector
+   ========================= */
+
+.inspector {
+  height: max-content;
+}
+
+.seatbig {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1;
+  margin: 20px 0 4px;
+}
+
+.status {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #76818a;
+}
+
+.stack {
+  display: grid;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+/* =========================
+   Messages
+   ========================= */
+
+.success,
+.error {
+  padding: 11px 13px;
+  border-radius: 8px;
+  margin: 14px 0;
+  font-size: 13px;
+}
+
+.success {
+  background: #edf8f1;
+  color: #286b46;
+}
+
+.error {
+  background: #fff0f0;
+  color: #9b3434;
+}
+
+.muted {
+  color: #89939b;
+}
+
+/* =========================
+   Authentication
+   ========================= */
+
+.auth {
+  max-width: 430px;
+  margin: 70px auto;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #e5e9eb;
+  margin: -24px -24px 24px;
+}
+
+.tabs button {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.tabs .active {
+  font-weight: 800;
+  border-bottom: 2px solid #18222c;
+}
+
+.auth h2 {
+  margin-top: 0;
+}
+
+.auth form,
+.managegrid form {
+  display: grid;
+  gap: 13px;
+}
+
+.auth label {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================
+   Form Elements
+   ========================= */
+
+input,
+textarea,
+select {
+  border: 1px solid #ccd3d8;
+  border-radius: 8px;
+  padding: 11px 12px;
+  background: #fff;
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #8b969f;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* =========================
+   Utility Classes
+   ========================= */
+
+.center {
+  text-align: center;
+  padding: 80px;
+  color: #77828b;
+}
+
+.empty {
+  text-align: center;
+  padding: 70px;
+  color: #7a858e;
+}
+
+.narrow {
+  max-width: 700px;
+}
+
+/* =========================
+   Profile
+   ========================= */
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.profile div {
+  display: grid;
+  gap: 3px;
+}
+
+.profile span {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #87919a;
+}
+
+/* =========================
+   Bookings
+   ========================= */
+
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.booking {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+}
+
+.booking div {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.booking small {
+  grid-column: 1 / -1;
+  color: #8a949c;
+}
+
+/* =========================
+   Management
+   ========================= */
+
+.managegrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.managegrid h2 {
+  margin-top: 0;
+}
+
+.mini {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #edf0f2;
+  padding: 12px 0;
+  font-size: 13px;
+}
+
+.mini span:last-child {
+  color: #7d8790;
+}
+
+/* =========================
+   Responsive — Tablet
+   ========================= */
+
+@media (max-width: 850px) {
+  .hero,
+  .detailgrid,
+  .managegrid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pagehead {
+    display: block;
+  }
+
+  .search {
+    min-width: 0;
+    margin-top: 20px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+}
+
+/* =========================
+   Responsive — Mobile
+   ========================= */
+
+@media (max-width: 600px) {
+  header {
+    padding: 0 16px;
+  }
+
+  nav {
+    gap: 10px;
+  }
+
+  nav a:nth-child(2),
+  nav a:nth-child(3) {
+    display: none;
+  }
+
+  main {
+    padding: 30px 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seat {
+    width: 32px;
+    height: 30px;
+  }
+
+  .seatrow {
+    gap: 4px;
+  }
+
+  .hero {
+    padding: 30px 0;
+  }
+
+  .profile {
+    grid-template-columns: 1fr;
+  }
+}
